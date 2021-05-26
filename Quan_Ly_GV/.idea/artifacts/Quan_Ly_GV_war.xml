@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="Quan_Ly_GV:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>Quan_Ly_GV</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="Quan_Ly_GV-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="Quan_Ly_GV:war exploded" />
+    </root>
+  </artifact>
+</component>
