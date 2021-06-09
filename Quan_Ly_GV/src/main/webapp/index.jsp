@@ -63,7 +63,7 @@
 </style>
 <body>
 
-<nav class="navbar navbar-default">
+<nav class="navbar navbar-default"  style="margin-top: 50px">
     <div class="container-fluid">
 
         <ul class="nav navbar-nav">
@@ -81,7 +81,7 @@
                 </div>
             </div>
         </form>
-        <div style="margin-top: 13px;"><a>Đăng nhập</a></div>
+        <div style="margin-top: 13px  ;  position: absolute;margin-left: 444px;"><a>Đăng nhập</a></div>
     </div>
     </div>
 </nav>
