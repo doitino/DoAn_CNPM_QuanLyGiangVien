@@ -42,13 +42,15 @@ public class GiangVienEntity {
         }
 
     }
-    public static List<GiangVien> getSearchAll(String name) {
+    public static List<GiangVien> getSearchAll(String name ) {
         List<GiangVien> re;
         PreparedStatement st = null;
         try {
-            String sql = "select * from giang_vien where ten_gv like ? ";
+            String sql = "select * from giang_vien where ten_gv like ? or hoc_vi like ? or gioi_tinh like ?";
             st = ConnectionDB.connect(sql);
             st.setString(1, "%" + name + "%");
+            st.setString(2, "%" + name + "%");
+            st.setString(3, "%" + name + "%");
             System.out.println(sql);
             ResultSet rs = st.executeQuery();
             re = new LinkedList<>();

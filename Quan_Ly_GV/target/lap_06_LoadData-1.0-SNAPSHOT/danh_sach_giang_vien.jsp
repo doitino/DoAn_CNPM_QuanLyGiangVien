@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <style>
     body{
@@ -31,10 +32,13 @@
         height: 40px;
         border-radius: 5px;
     }
+    .left-menu img{
+        width: 30px;
+    }
     li a{
         color: rgb(43, 42, 42);
         font-size: 20px;
-        margin-left: 30px;
+        margin-left: 10px;
     }
     .left-component{
         background-color: rgb(190 226 243);
@@ -69,10 +73,10 @@
 <nav class="navbar navbar-default" style="margin-top: 50px">
     <div class="container-fluid">
         <div class="navbar-header">
-            <a class="navbar-brand" href="#">Hệ thống</a>
+            <a class="navbar-brand" href="CT_Index"><img style="    width: 54px;margin-top: -16px;" src="img/home.png"></a>
         </div>
         <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
+            <li class="active"><a href="CT_Index">Home</a></li>
             <li><a href="#">Xem danh sách</a></li>
             <li><a href="#">Chức năng</a></li>
         </ul>
@@ -96,30 +100,30 @@
         <div class="left-component col-4">
             <div>
                 <li class="left-menu " style="background-color: blue;">
-                    <i></i>
-                    <a style="color: white;">Menu</a>
+                    <img width="30px" src="img/img_87583.png">
+                    <a style="color: white;margin-left: 5px;padding-bottom: -10px;position: absolute;margin-top: 4px;">Menu</a>
                 </li>
                 <li class="left-menu">
-                    <i></i>
-                    <a href="ds_giao_vien.html">Giáo viên</a>
+                    <img src="img/icon15.png">
+                    <a href="CT_DanhSach">Giáo viên</a>
                 </li>
                 <li class="left-menu">
-                    <i></i>
+                    <img src="img/img_158445.png">
                     <a>Khoa</a>
                 </li>
                 <li class="left-menu">
-                    <i></i>
+                    <img src="img/33277.png">
                     <a>Môn học</a>
                 </li>
                 <li class="left-menu">
-                    <i></i>
+                    <img src="img/img_140174.png">
                     <a>Hướng dẫn</a>
                 </li>
             </div>
         </div>
-        <div class="right-component col-8">
-            <div><h3 class="text-center">Kết quả timg kiếm</h3></div>
-            <table class="table table-striped">
+        <div class="right-component col-8" style="    background-color: white">
+            <div><h3 class="text-center">Danh sách giảng viên</h3></div>
+            <table class="table data-table  table-striped">
                 <thead>
                 <tr>
                     <th>Mã</th>

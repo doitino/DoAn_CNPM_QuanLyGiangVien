@@ -16,60 +16,18 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
 </head>
-<style>
-    body{
-        background-color: #fcfafa;
-        width: 80%;
-        margin: auto;
-    }
-    .left-menu{
-        list-style: none;
-        background-color: white;
-        margin-top: 20px;
-        height: 40px;
-        border-radius: 5px;
-    }
-    li a{
-        color: rgb(43, 42, 42);
-        font-size: 20px;
-        margin-left: 30px;
-    }
-    .left-component{
-        background-color: rgb(190 226 243);
-        float: left;
-        width: 30%;
-        padding-bottom: 40px;
-        border: 5px solid rgb(187, 200, 238);
-        margin-left: 16px;
-        height: 500px;
-    }
-    .right-component{
-        background-color:rgb(190 226 243);
-        margin-left: 10px;
-        float: left;
-        width: 68%;
-        height: 500px;
-        border-radius: 5px;
-        border: 5px solid  rgb(187, 200, 238) ;
-        margin-left: -5px;
-    }
-    .right-main{
-        width: 98%;
-        margin-left: 1%;
-        border: 3px solid rgb(245, 245, 247);
-        margin-top: 15px;
-        height: 120px;
-    }
 
-</style>
 <body>
 
 <nav class="navbar navbar-default"  style="margin-top: 50px">
     <div class="container-fluid">
-
+        <div class="navbar-header">
+            <a class="navbar-brand" href="CT_Index"><img style="    width: 54px;margin-top: -16px;" src="img/home.png"></a>
+        </div>
         <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
+            <li class="active"><a href="CT_Index">Home</a></li>
             <li><a href="CT_DanhSach">Xem danh sách</a></li>
             <li><a href="#">Chức năng</a></li>
         </ul>
@@ -83,7 +41,7 @@
                 </div>
             </div>
         </form>
-        <div style="margin-top: 13px  ;  position: absolute;"><a style="margin-left: 444px">Đăng nhập</a></div>
+        <div style="margin-top: 13px  ;  position: absolute;margin-left: 444px;"><a style="margin-left: 444px">Đăng nhập</a></div>
     </div>
     </div>
 </nav>
@@ -93,28 +51,28 @@
         <div class="left-component col-4">
             <div>
                 <li class="left-menu " style="background-color: blue;">
-                    <i></i>
-                    <a style="color: white;">Menu</a>
+                    <img width="30px" src="img/img_87583.png">
+                    <a style="color: white;margin-left: 5px;padding-bottom: -10px;position: absolute;margin-top: 4px;">Menu</a>
                 </li>
                 <li class="left-menu">
-                    <i></i>
-                    <a href="ds_giangvien">Giáo viên</a>
+                    <img src="img/icon15.png">
+                    <a href="CT_DanhSach">Giáo viên</a>
                 </li>
                 <li class="left-menu">
-                    <i></i>
+                    <img src="img/img_158445.png">
                     <a>Khoa</a>
                 </li>
                 <li class="left-menu">
-                    <i></i>
+                    <img src="img/33277.png">
                     <a>Môn học</a>
                 </li>
                 <li class="left-menu">
-                    <i></i>
+                    <img src="img/img_140174.png">
                     <a>Hướng dẫn</a>
                 </li>
             </div>
         </div>
-        <div class="right-component col-8">
+        <div class="right-component col-8"  style="    background-color: white">
             <div style="background-color: rgb(42, 104, 219); height: 50px;width: 98%;margin-left: 1%;border-radius: 3px;">
                 <h2 class=" text-center" style="padding-top: 10px;color: red;">SYSTEM TEACHER MANAGER</h2>
             </div>
