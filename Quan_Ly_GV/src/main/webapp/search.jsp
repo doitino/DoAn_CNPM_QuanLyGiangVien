@@ -1,14 +1,17 @@
 <%--
   Created by IntelliJ IDEA.
   User: LaptopUSAPro
-  Date: 26/05/2021
-  Time: 11:15 SA
+  Date: 09/06/2021
+  Time: 12:24 CH
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
+<%@ taglib prefix="cc" uri="http://java.sun.com/jsp/jstl/core" %>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Quản Lý giảng viên </title>
+    <title>Danh sách giảng viên</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -17,7 +20,7 @@
 </head>
 <style>
     body{
-        background-color: #fcfafa;
+        background-color: #fdf7f7;
         width: 80%;
         margin: auto;
     }
@@ -43,7 +46,7 @@
         height: 500px;
     }
     .right-component{
-        background-color:rgb(190 226 243);
+        background-color:white;
         margin-left: 10px;
         float: left;
         width: 68%;
@@ -63,15 +66,17 @@
 </style>
 <body>
 
-<nav class="navbar navbar-default"  style="margin-top: 50px">
+<nav class="navbar navbar-default" style="margin-top: 50px">
     <div class="container-fluid">
-
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">Hệ thống</a>
+        </div>
         <ul class="nav navbar-nav">
             <li class="active"><a href="#">Home</a></li>
-            <li><a href="CT_DanhSach">Xem danh sách</a></li>
+            <li><a href="#">Xem danh sách</a></li>
             <li><a href="#">Chức năng</a></li>
         </ul>
-        <form class="navbar-form navbar-left" action="/action_page.php">
+        <form class="navbar-form navbar-left" action="CT_Search">
             <div class="input-group">
                 <input type="text" class="form-control" placeholder="Search" name="search">
                 <div class="input-group-btn">
@@ -81,7 +86,7 @@
                 </div>
             </div>
         </form>
-        <div style="margin-top: 13px  ;  position: absolute;"><a style="margin-left: 444px">Đăng nhập</a></div>
+        <div style="margin-top: 13px  ;  position: absolute;margin-left: 444px;"><a STYLE="margin-left: 444px">Đăng nhập</a></div>
     </div>
     </div>
 </nav>
@@ -96,7 +101,7 @@
                 </li>
                 <li class="left-menu">
                     <i></i>
-                    <a href="ds_giangvien">Giáo viên</a>
+                    <a href="CT_DanhSach">Giáo viên</a>
                 </li>
                 <li class="left-menu">
                     <i></i>
@@ -113,30 +118,29 @@
             </div>
         </div>
         <div class="right-component col-8">
-            <div style="background-color: rgb(42, 104, 219); height: 50px;width: 98%;margin-left: 1%;border-radius: 3px;">
-                <h2 class=" text-center" style="padding-top: 10px;color: red;">SYSTEM TEACHER MANAGER</h2>
-            </div>
-            <div class="right-main">
-                <div style="background-color: rgb(89, 174, 253);color: rgb(19, 6, 133);margin-top: -10px;height: 40px;"><h4>Thông tin chung</h4></div>
-                <div style="background-color: white;margin-top:20px;">
-                    <p style="float: left;margin-left: 5px;">Danh sách các trưởng khoa</p>
-                    <a style="float: right;margin-right: 5px;">Xem danh sách</a>
-                </div>
-            </div>
-            <div class="right-main">
-                <div style="background-color: rgb(89, 174, 253);color: rgb(19, 6, 133);margin-top: -10px;height: 40px;"><h4>Hướng dẫn</h4></div>
-                <div style="background-color: white;margin-top:20px;">
-                    <p style="float: left;margin-left: 5px;">Hướng dẫn lấy lại mật khẩu</p>
-                    <a style="float: right;margin-right: 5px;">Xem chi tiết</a>
-                </div>
-            </div>
-            <div class="right-main">
-                <div style="background-color: rgb(89, 174, 253);color: rgb(19, 6, 133);margin-top: -10px;height: 40px;"><h4>Thông tin chung</h4></div>
-                <div style="background-color: white;margin-top:20px;">
-                    <p style="float: left;margin-left: 5px;">Danh sách các trưởng khoa</p>
-                    <a style="float: right;margin-right: 5px;">Xem danh sách</a>
-                </div>
-            </div>
+            <div><h3 class="text-center">Kết quả tìm kiếm</h3></div>
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th>Mã</th>
+                    <th>Họ tên</th>
+                    <th>Ngày sinh</th>
+                    <th>Giới tính</th>
+                    <th>Khoa</th>
+                    <th>Học vị</th>
+                    <th></th>
+                </tr>
+                </thead>
+                <tbody>
+                <cc:forEach items="${list}" var="g">
+                    <tr>
+                        <td>${g.ma_gv}</td>
+                        <td>${g.ten_gv}</td>
+
+                    </tr>
+                </cc:forEach>
+                </tbody>
+            </table>
         </div>
 
     </div>
@@ -144,3 +148,4 @@
 
 </body>
 </html>
+

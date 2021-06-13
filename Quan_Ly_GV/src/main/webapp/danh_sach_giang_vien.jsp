@@ -6,6 +6,8 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
+<%@ taglib prefix="cc" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -74,7 +76,7 @@
             <li><a href="#">Xem danh sách</a></li>
             <li><a href="#">Chức năng</a></li>
         </ul>
-        <form class="navbar-form navbar-left" action="/action_page.php">
+        <form class="navbar-form navbar-left" action="CT_Search">
             <div class="input-group">
                 <input type="text" class="form-control" placeholder="Search" name="search">
                 <div class="input-group-btn">
@@ -84,7 +86,7 @@
                 </div>
             </div>
         </form>
-        <div style="margin-top: 13px  ;  position: absolute;margin-left: 444px;"><a>Đăng nhập</a></div>
+        <div style="margin-top: 13px  ;  position: absolute;margin-left: 444px;"><a STYLE="margin-left: 444px">Đăng nhập</a></div>
     </div>
     </div>
 </nav>
@@ -130,42 +132,17 @@
                 </tr>
                 </thead>
                 <tbody>
+                <cc:forEach items="${list}" var="g">
                 <tr>
-                    <td>DT2000IT</td>
-                    <td>Nguyên Văn A </td>
-                    <td>10-09-1983</td>
-                    <td>Nam</td>
-                    <td>CNTT</td>
-                    <td>Tiến Sĩ</td>
-                    <td><a>Chi tiết</a></td>
+                    <td>${g.ma_gv}</td>
+                    <td>${g.ten_gv}</td>
+                    <td>${g.ngay_sinh}</td>
+                    <td>${g.gioi_tinh}</td>
+                    <td>${g.ma_khoa}</td>
+                    <td>${g.hoc_vi}</td>
+
                 </tr>
-                <tr>
-                    <td>DT2000IT</td>
-                    <td>Nguyên Văn A </td>
-                    <td>10-09-1983</td>
-                    <td>Nam</td>
-                    <td>CNTT</td>
-                    <td>Tiến Sĩ</td>
-                    <td><a>Chi tiết</a></td>
-                </tr>
-                <tr>
-                    <td>DT2000IT</td>
-                    <td>Nguyên Văn A </td>
-                    <td>10-09-1983</td>
-                    <td>Nam</td>
-                    <td>CNTT</td>
-                    <td>Tiến Sĩ</td>
-                    <td><a>Chi tiết</a></td>
-                </tr>
-                <tr>
-                    <td>DT2000IT</td>
-                    <td>Nguyên Văn A </td>
-                    <td>10-09-1983</td>
-                    <td>Nam</td>
-                    <td>CNTT</td>
-                    <td>Tiến Sĩ</td>
-                    <td><a>Chi tiết</a></td>
-                </tr>
+                </cc:forEach>
                 </tbody>
             </table>
         </div>

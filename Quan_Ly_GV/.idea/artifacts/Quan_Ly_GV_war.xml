@@ -7,7 +7,7 @@
         <packaging>war</packaging>
       </options>
     </properties>
-    <root id="archive" name="Quan_Ly_GV-1.0-SNAPSHOT.war">
+    <root id="archive" name="lap_06_LoadData-1.0-SNAPSHOT.war">
       <element id="artifact" artifact-name="Quan_Ly_GV:war exploded" />
     </root>
   </artifact>

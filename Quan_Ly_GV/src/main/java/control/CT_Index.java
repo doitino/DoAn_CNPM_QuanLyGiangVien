@@ -1,4 +1,4 @@
-package home;
+package control;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -7,14 +7,14 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet(name = "ds_giangvien", urlPatterns = "/ds_giangvien")
-public class ds_giangvien extends HttpServlet {
+@WebServlet(name = "CT_Index", urlPatterns = "/CT_Index")
+public class CT_Index extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         doGet(request, response);
         //demo_template
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        request.getRequestDispatcher("danh_sach_giang_vien.jsp").forward(request,response);
+        request.getRequestDispatcher("index.jsp").forward(request,response);
     }
 }

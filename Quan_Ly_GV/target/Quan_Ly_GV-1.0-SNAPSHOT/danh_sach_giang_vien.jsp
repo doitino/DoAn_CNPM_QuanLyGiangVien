@@ -64,7 +64,7 @@
 </style>
 <body>
 
-<nav class="navbar navbar-default" style="margin-top: 40px">
+<nav class="navbar navbar-default" style="margin-top: 50px">
     <div class="container-fluid">
         <div class="navbar-header">
             <a class="navbar-brand" href="#">Hệ thống</a>
@@ -84,7 +84,7 @@
                 </div>
             </div>
         </form>
-        <div style="margin-top: 13px;"><a>Đăng nhập</a></div>
+        <div style="margin-top: 13px  ;  position: absolute;margin-left: 444px;"><a>Đăng nhập</a></div>
     </div>
     </div>
 </nav>
@@ -130,42 +130,17 @@
                 </tr>
                 </thead>
                 <tbody>
+                <cc:forEach items="${list}" var="g">
                 <tr>
-                    <td>DT2000IT</td>
-                    <td>Nguyên Văn A </td>
+                    <td>{g.ma_gv}</td>
+                    <td>{g.ten_gv}</td>
                     <td>10-09-1983</td>
                     <td>Nam</td>
                     <td>CNTT</td>
                     <td>Tiến Sĩ</td>
                     <td><a>Chi tiết</a></td>
                 </tr>
-                <tr>
-                    <td>DT2000IT</td>
-                    <td>Nguyên Văn A </td>
-                    <td>10-09-1983</td>
-                    <td>Nam</td>
-                    <td>CNTT</td>
-                    <td>Tiến Sĩ</td>
-                    <td><a>Chi tiết</a></td>
-                </tr>
-                <tr>
-                    <td>DT2000IT</td>
-                    <td>Nguyên Văn A </td>
-                    <td>10-09-1983</td>
-                    <td>Nam</td>
-                    <td>CNTT</td>
-                    <td>Tiến Sĩ</td>
-                    <td><a>Chi tiết</a></td>
-                </tr>
-                <tr>
-                    <td>DT2000IT</td>
-                    <td>Nguyên Văn A </td>
-                    <td>10-09-1983</td>
-                    <td>Nam</td>
-                    <td>CNTT</td>
-                    <td>Tiến Sĩ</td>
-                    <td><a>Chi tiết</a></td>
-                </tr>
+                </cc:forEach>
                 </tbody>
             </table>
         </div>
