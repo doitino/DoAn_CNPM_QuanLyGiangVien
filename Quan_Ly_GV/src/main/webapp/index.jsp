@@ -60,7 +60,7 @@
                 </li>
                 <li class="left-menu">
                     <img src="img/img_158445.png">
-                    <a>Khoa</a>
+                    <a href="CT_DS_Khoa">Khoa</a>
                 </li>
                 <li class="left-menu">
                     <img src="img/33277.png">

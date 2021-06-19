@@ -1,6 +1,7 @@
 package bin;
 
 import java.io.Serializable;
+import java.util.Collection;
 
 public class Khoa implements Serializable {
     private int ma_khoa;
@@ -49,4 +50,5 @@ public class Khoa implements Serializable {
     public void setTr_khoa(String tr_khoa) {
         this.tr_khoa = tr_khoa;
     }
+
 }

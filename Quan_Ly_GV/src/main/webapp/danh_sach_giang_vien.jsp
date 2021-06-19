@@ -123,6 +123,7 @@
         </div>
         <div class="right-component col-8" style="    background-color: white">
             <div><h3 class="text-center">Danh sách giảng viên</h3></div>
+            <div><button class="button button-primary" style="margin-left: 800px;background-color: green;color: white">Thêm</button></div>
             <table class="table data-table  table-striped">
                 <thead>
                 <tr>
@@ -132,7 +133,7 @@
                     <th>Giới tính</th>
                     <th>Khoa</th>
                     <th>Học vị</th>
-                    <th></th>
+                    <th>Thao tác</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -144,7 +145,7 @@
                     <td>${g.gioi_tinh}</td>
                     <td>${g.ma_khoa}</td>
                     <td>${g.hoc_vi}</td>
-
+                    <td><a>Chi tiết</a></td>
                 </tr>
                 </cc:forEach>
                 </tbody>

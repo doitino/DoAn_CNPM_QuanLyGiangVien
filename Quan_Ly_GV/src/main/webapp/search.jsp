@@ -74,6 +74,7 @@
         </div>
         <div class="right-component col-8"  style="    background-color: white">
             <div><h3 class="text-center">Kết quả tìm kiếm</h3></div>
+            <div><button class="button button-primary" style="margin-left: 800px;background-color: green;color: white;margin-bottom: 20px">Thêm</button></div>
             <table class="table table-bordered table-striped">
                 <thead>
                 <tr>
@@ -83,6 +84,7 @@
                     <th>Giới tính</th>
                     <th>Khoa</th>
                     <th>Học vị</th>
+                    <th></th>
                 </tr>
                 </thead>
                 <tbody>
@@ -94,7 +96,7 @@
                         <td>${g.gioi_tinh}</td>
                         <td>${g.ma_khoa}</td>
                         <td>${g.hoc_vi}</td>
-
+                        <td>Chi tiết</td>
                     </tr>
                 </cc:forEach>
                 </tbody>
