@@ -1,7 +1,9 @@
 package Dao;
 
 import bin.GiangVien;
+import bin.MonHoc;
 import model.GiangVienEntity;
+import model.MonHocEntity;
 
 import java.sql.*;
 import java.util.LinkedList;
@@ -32,9 +34,9 @@ public class ConnectionDB {
 
     public static void main(String[] args) throws SQLException, ClassNotFoundException {
         ConnectionDB.connect();
-        GiangVien g = new GiangVien();
-        GiangVienEntity ct = new GiangVienEntity();
-        LinkedList<GiangVien> a = (LinkedList<GiangVien>) ct.getAll();
-        System.out.println(a.get(0).getGioi_tinh());
+        MonHoc g = new MonHoc();
+        MonHocEntity ct = new MonHocEntity();
+        LinkedList<MonHoc> a = (LinkedList<MonHoc>) ct.getAll();
+        System.out.println(a.get(0).getMa_mh());
     }
 }

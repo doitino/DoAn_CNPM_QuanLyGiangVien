@@ -19,6 +19,55 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="css/style.css">
 </head>
+<style>
+    body{
+        background-color: #fdf7f7;
+        width: 80%;
+        margin: auto;
+    }
+    .left-menu{
+        list-style: none;
+        background-color: white;
+        margin-top: 20px;
+        height: 40px;
+        border-radius: 5px;
+    }
+    .left-menu img{
+        width: 30px;
+    }
+    li a{
+        color: rgb(43, 42, 42);
+        font-size: 20px;
+        margin-left: 10px;
+    }
+    .left-component{
+        background-color: rgb(190 226 243);
+        float: left;
+        width: 30%;
+        padding-bottom: 40px;
+        border: 5px solid rgb(187, 200, 238);
+        margin-left: 16px;
+        height: 500px;
+    }
+    .right-component{
+        background-color:white;
+        margin-left: 10px;
+        float: left;
+        width: 68%;
+        height: 500px;
+        border-radius: 5px;
+        border: 5px solid  rgb(187, 200, 238) ;
+        margin-left: -5px;
+    }
+    .right-main{
+        width: 98%;
+        margin-left: 1%;
+        border: 3px solid rgb(245, 245, 247);
+        margin-top: 15px;
+        height: 120px;
+    }
+
+</style>
 <body>
 
 <nav class="navbar navbar-default" style="margin-top: 50px">
@@ -28,7 +77,7 @@
         </div>
         <ul class="nav navbar-nav">
             <li class="active"><a href="CT_Index">Home</a></li>
-            <li><a href="CT_DanhSach">Xem danh sách</a></li>
+            <li><a href="#">Xem danh sách</a></li>
             <li><a href="#">Chức năng</a></li>
         </ul>
         <form class="navbar-form navbar-left" action="CT_Search">
@@ -72,10 +121,10 @@
                 </li>
             </div>
         </div>
-        <div class="right-component col-8"  style="    background-color: white">
-            <div><h3 class="text-center">Kết quả tìm kiếm</h3></div>
-            <div><button class="button button-primary" style="margin-left: 800px;background-color: green;color: white;margin-bottom: 20px">Thêm</button></div>
-            <table class="table table-bordered table-striped">
+        <div class="right-component col-8" style="    background-color: white">
+            <div ><h3 class="text-center">Danh sách Trưởng khoa</h3></div>
+            <div><button class="button button-primary" style="margin-left: 800px;background-color: green;color: white">Thêm</button></div>
+            <table class="table data-table  table-striped">
                 <thead>
                 <tr>
                     <th>Mã</th>
@@ -84,7 +133,7 @@
                     <th>Giới tính</th>
                     <th>Khoa</th>
                     <th>Học vị</th>
-                    <th></th>
+                    <th>Thao tác</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -96,7 +145,7 @@
                         <td>${g.gioi_tinh}</td>
                         <td>${g.ma_khoa}</td>
                         <td>${g.hoc_vi}</td>
-                        <td>Chi tiết</td>
+                        <td><a href="CT_TKB?ma_gv= ${g.ma_gv}">Chi tiết</a></td>
                     </tr>
                 </cc:forEach>
                 </tbody>

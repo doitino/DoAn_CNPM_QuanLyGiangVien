@@ -41,7 +41,7 @@
                 </div>
             </div>
         </form>
-        <div style="margin-top: 13px  ;  position: absolute;margin-left: 444px;"><a style="margin-left: 444px">Đăng nhập</a></div>
+        <div style="margin-top: 13px  ;  position: absolute;margin-left: 444px;"><a style="margin-left: 444px" href="CT_Login">Đăng nhập</a></div>
     </div>
     </div>
 </nav>
@@ -80,7 +80,7 @@
                 <div style="background-color: rgb(89, 174, 253);color: rgb(19, 6, 133);margin-top: -10px;height: 40px;"><h4>Thông tin chung</h4></div>
                 <div style="background-color: white;margin-top:20px;">
                     <p style="float: left;margin-left: 5px;">Danh sách các trưởng khoa</p>
-                    <a style="float: right;margin-right: 5px;">Xem danh sách</a>
+                    <a style="float: right;margin-right: 5px;" href="CT_TR_Khoa">Xem danh sách</a>
                 </div>
             </div>
             <div class="right-main">
@@ -88,13 +88,6 @@
                 <div style="background-color: white;margin-top:20px;">
                     <p style="float: left;margin-left: 5px;">Hướng dẫn lấy lại mật khẩu</p>
                     <a style="float: right;margin-right: 5px;">Xem chi tiết</a>
-                </div>
-            </div>
-            <div class="right-main">
-                <div style="background-color: rgb(89, 174, 253);color: rgb(19, 6, 133);margin-top: -10px;height: 40px;"><h4>Thông tin chung</h4></div>
-                <div style="background-color: white;margin-top:20px;">
-                    <p style="float: left;margin-left: 5px;">Danh sách các trưởng khoa</p>
-                    <a style="float: right;margin-right: 5px;">Xem danh sách</a>
                 </div>
             </div>
         </div>

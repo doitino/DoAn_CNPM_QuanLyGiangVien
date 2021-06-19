@@ -90,7 +90,7 @@
                 </div>
             </div>
         </form>
-        <div style="margin-top: 13px  ;  position: absolute;margin-left: 444px;"><a STYLE="margin-left: 444px">Đăng nhập</a></div>
+        <div style="margin-top: 13px  ;  position: absolute;margin-left: 444px;"><a STYLE="margin-left: 444px" href="CT_Login">Đăng nhập</a></div>
     </div>
     </div>
 </nav>
@@ -109,7 +109,7 @@
                 </li>
                 <li class="left-menu">
                     <img src="img/img_158445.png">
-                    <a>Khoa</a>
+                    <a href="CT_DS_Khoa">Khoa</a>
                 </li>
                 <li class="left-menu">
                     <img src="img/33277.png">
@@ -122,7 +122,7 @@
             </div>
         </div>
         <div class="right-component col-8" style="    background-color: white">
-            <div><h3 class="text-center">Danh sách giảng viên</h3></div>
+            <div><h3 class="text-center">Danh sách Khoa</h3></div>
             <table class="table data-table  table-striped">
                 <thead>
                 <tr>
