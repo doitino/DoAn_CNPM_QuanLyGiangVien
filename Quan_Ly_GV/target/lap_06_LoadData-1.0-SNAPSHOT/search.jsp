@@ -64,7 +64,7 @@
                 </li>
                 <li class="left-menu">
                     <img src="img/33277.png">
-                    <a>Môn học</a>
+                    <a href="CT_Mon_Hoc">Môn học</a>
                 </li>
                 <li class="left-menu">
                     <img src="img/img_140174.png">
@@ -74,8 +74,12 @@
         </div>
         <div class="right-component col-8"  style="    background-color: white">
             <div><h3 class="text-center">Kết quả tìm kiếm</h3></div>
-            <div><button class="button button-primary" style="margin-left: 800px;background-color: green;color: white;margin-bottom: 20px">Thêm</button></div>
-            <table class="table table-bordered table-striped">
+            <div>
+                <button id="bt1" onclick="giangvien()" class="button button-primary" style="background-color: green;color: black;margin-bottom: 20px;float: left;margin-right: 10px">Giảng Viên</button>
+                <button id="bt2" onclick="khoa()" class="button button-primary" style="background-color: #d7eed7;color: black;margin-bottom: 20px;float: left;margin-right: 10px">Khoa</button>
+                <button id="bt3" onclick="monhoc()" class="button button-primary" style="background-color: #d7eed7;color: black;margin-bottom: 20px">Môn học</button>
+            </div>
+            <table class="table table-bordered table-striped" id="table1">
                 <thead>
                 <tr>
                     <th>Mã</th>
@@ -96,7 +100,60 @@
                         <td>${g.gioi_tinh}</td>
                         <td>${g.ma_khoa}</td>
                         <td>${g.hoc_vi}</td>
-                        <td>Chi tiết</td>
+                        <td><a href="CT_TKB">Chi tiết</a></td>
+                    </tr>
+                </cc:forEach>
+                </tbody>
+            </table>
+            <table class="table data-table  table-striped" id="table2" style="display: none" >
+                <thead>
+                <tr>
+                    <th>Mã khoa</th>
+                    <th>Tên khoa</th>
+                    <th>Năm thành lập</th>
+                    <th>Trưởng khoa</th>
+                    <th>Thao tác</th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                </tr>
+                </thead>
+                <tbody>
+                <cc:forEach items="${list2}" var="k">
+                    <tr>
+                        <td>${k.ma_khoa}</td>
+                        <td>${k.ten_khoa}</td>
+                        <td>${k.nam_tl}</td>
+                        <td>${k.tr_khoa}</td>
+                        <td><a>Chi tiết</a></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </cc:forEach>
+                </tbody>
+            </table>
+            <table class="table data-table  table-striped" id="table3" style="display: none" >
+                <thead>
+                <tr>
+                    <th>Mã môn học</th>
+                    <th>Tên môn học</th>
+                    <th>Tín chỉ LT</th>
+                    <th>Tín chỉ TH</th>
+                    <th>TGBĐ</th>
+                    <th>TGKT</th>
+                </tr>
+                </thead>
+                <tbody>
+                <cc:forEach items="${list3}" var="m">
+                    <tr>
+                        <td>${m.ma_mh}</td>
+                        <td>${m.ten_mh}</td>
+                        <td>${m.so_tin_chi_lt}</td>
+                        <td>${m.so_tin_chi_th}</td>
+                        <td>${m.tg_bd}</td>
+                        <td>${m.tg_kt}</td>
+                        <td><a>Chi tiết</a></td>
                     </tr>
                 </cc:forEach>
                 </tbody>
@@ -105,7 +162,36 @@
 
     </div>
 </div>
+<script>
 
+    function giangvien(){
+        document.getElementById("table1").style.display ="block";
+        document.getElementById("table2").style.display ="none";
+        document.getElementById("table3").style.display ="none";
+        document.getElementById("bt1").style.backgroundColor ="green"
+        document.getElementById("bt2").style.backgroundColor =" #d7eed7"
+        document.getElementById("bt3").style.backgroundColor =" #d7eed7"
+
+    }
+    function khoa(){
+        document.getElementById("table1").style.display ="none";
+        document.getElementById("table2").style.display ="block";
+        document.getElementById("table3").style.display ="none";
+        document.getElementById("bt1").style.backgroundColor =" #d7eed7"
+        document.getElementById("bt2").style.backgroundColor ="green"
+        document.getElementById("bt3").style.backgroundColor =" #d7eed7"
+
+    }
+    function monhoc(){
+        document.getElementById("table1").style.display ="none";
+        document.getElementById("table2").style.display ="none";
+        document.getElementById("table3").style.display ="block";
+        document.getElementById("bt1").style.backgroundColor =" #d7eed7"
+        document.getElementById("bt2").style.backgroundColor =" #d7eed7"
+        document.getElementById("bt3").style.backgroundColor =" green"
+
+    }
+</script>
 </body>
 </html>
 

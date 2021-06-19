@@ -52,7 +52,7 @@
             <div>
                 <li class="left-menu " style="background-color: blue;">
                     <img width="30px" src="img/img_87583.png">
-                    <a style="color: white;margin-left: 5px;padding-bottom: -10px;position: absolute;margin-top: 4px;">Menu</a>
+                    <a  style="color: white;margin-left: 5px;padding-bottom: -10px;position: absolute;margin-top: 4px;">Menu</a>
                 </li>
                 <li class="left-menu">
                     <img src="img/icon15.png">
@@ -64,7 +64,7 @@
                 </li>
                 <li class="left-menu">
                     <img src="img/33277.png">
-                    <a>Môn học</a>
+                    <a href="CT_Mon_Hoc">Môn học</a>
                 </li>
                 <li class="left-menu">
                     <img src="img/img_140174.png">

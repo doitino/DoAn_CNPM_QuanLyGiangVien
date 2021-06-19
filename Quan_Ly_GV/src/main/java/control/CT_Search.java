@@ -1,7 +1,11 @@
 package control;
 
 import bin.GiangVien;
+import bin.Khoa;
+import bin.MonHoc;
 import model.GiangVienEntity;
+import model.KhoaEntity;
+import model.MonHocEntity;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -23,8 +27,13 @@ public class CT_Search extends HttpServlet {
         String name = request.getParameter("search");
         System.out.print(name);
         Collection<GiangVien> values = new GiangVienEntity().getSearchAll(name);
+        Collection<Khoa> values2 = new KhoaEntity().getSearchKhoa(name);
+        Collection<MonHoc> values3 = new MonHocEntity().getSearchMonHoc(name);
+
 
         request.setAttribute("list",values);
+        request.setAttribute("list2",values2);
+        request.setAttribute("list3",values3);
         request.getRequestDispatcher("search.jsp").forward(request,response);
     }
 }

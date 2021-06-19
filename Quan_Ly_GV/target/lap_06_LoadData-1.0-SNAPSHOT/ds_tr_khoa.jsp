@@ -113,7 +113,7 @@
                 </li>
                 <li class="left-menu">
                     <img src="img/33277.png">
-                    <a>Môn học</a>
+                    <a href="CT_Mon_Hoc">Môn học</a>
                 </li>
                 <li class="left-menu">
                     <img src="img/img_140174.png">
