@@ -34,9 +34,7 @@ public class ConnectionDB {
 
     public static void main(String[] args) throws SQLException, ClassNotFoundException {
         ConnectionDB.connect();
-        MonHoc g = new MonHoc();
-        MonHocEntity ct = new MonHocEntity();
-        LinkedList<MonHoc> a = (LinkedList<MonHoc>) ct.getAll();
-        System.out.println(a.get(0).getMa_mh());
+        GiangVien g = new GiangVien(1,"aa","aa","aaaaaaa",12,"vvvv");
+        GiangVienEntity.addone(g);
     }
 }

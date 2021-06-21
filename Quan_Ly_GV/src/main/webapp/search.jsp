@@ -100,7 +100,7 @@
                         <td>${g.gioi_tinh}</td>
                         <td>${g.ma_khoa}</td>
                         <td>${g.hoc_vi}</td>
-                        <td><a href="CT_TKB">Chi tiết</a></td>
+                        <td><a href="CT_TKB">TKB</a></td>
                     </tr>
                 </cc:forEach>
                 </tbody>

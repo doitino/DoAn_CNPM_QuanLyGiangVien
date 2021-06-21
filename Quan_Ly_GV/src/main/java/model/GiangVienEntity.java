@@ -3,10 +3,7 @@ package model;
 import Dao.ConnectionDB;
 import bin.GiangVien;
 
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -101,5 +98,27 @@ public class GiangVienEntity {
             return new LinkedList<>();
 
         }
+    }
+    // Thêm 1 sản phẩm vào database
+    public static int addone(GiangVien gv){
+        PreparedStatement pre = null;
+        try {
+            String sql ="insert into giang_vien (ma_gv,ten_gv,ngay_sinh,gioi_tinh,ma_khoa,hoc_vi) values (?,?,?,?,?,?)" ;
+            pre= ConnectionDB.connect(sql);
+            pre.setInt(1,gv.getMa_khoa());
+            pre.setString(2,gv.getTen_gv());
+            pre.setString(3,gv.getNgay_sinh());
+            pre.setString(4,gv.getGioi_tinh());
+            pre.setInt(5,gv.getMa_khoa());
+            pre.setString(6,gv.getHoc_vi());
+            pre.executeUpdate();
+
+            return 0;
+        } catch (ClassNotFoundException classNotFoundException) {
+            classNotFoundException.printStackTrace();
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+        return 0;
     }
 }
