@@ -32,7 +32,7 @@ public class CT_Login extends HttpServlet {
             if(check){
                 HttpSession session =request.getSession();
                 session.setAttribute("ten_dang_nhap" , username);
-                RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/CT_Index");
+                RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/index.jsp");
                 dispatcher.forward(request,response);
             }
             if(!check ){

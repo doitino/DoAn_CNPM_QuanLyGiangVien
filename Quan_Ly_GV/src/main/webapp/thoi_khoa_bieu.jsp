@@ -77,7 +77,7 @@
         </div>
         <ul class="nav navbar-nav">
             <li class="active"><a href="CT_Index">Home</a></li>
-            <li><a href="#">Xem danh sách</a></li>
+            <li><a href="CT_DanhSach">Xem danh sách</a></li>
             <li><a href="#">Chức năng</a></li>
         </ul>
         <form class="navbar-form navbar-left" action="CT_Search">

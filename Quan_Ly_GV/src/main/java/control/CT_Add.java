@@ -29,20 +29,21 @@ public class CT_Add extends HttpServlet {
             String gioitinh =request.getParameter("gioitinh");
             String makhoa = request.getParameter("makhoa");
             String hocvi = request.getParameter("hocvi");
+            int count =GiangVienEntity.count() +1;
             System.out.print(ten + ngaysinh+ hocvi);
 
 
             GiangVien gv = new GiangVien();
 
             if(ten!=null ||ngaysinh!=null|| gioitinh!=null || makhoa !=null ||hocvi !=null ) {
-                gv.setMa_gv(1222);
+                gv.setMa_gv(count);
                 gv.setTen_gv(ten);
                 gv.setNgay_sinh(ngaysinh);
                 gv.setGioi_tinh(gioitinh);
                 gv.setMa_khoa(Integer.parseInt(makhoa));
                 gv.setHoc_vi(hocvi);
                 GiangVienEntity.addone(gv);
-                request.getRequestDispatcher("danh_sach_giang_vien.jsp").forward(request,response);
+                request.getRequestDispatcher("CT_DanhSach").forward(request,response);
             }else {
                 request.getRequestDispatcher("them_giang_vien.jsp").forward(request,response);
             }

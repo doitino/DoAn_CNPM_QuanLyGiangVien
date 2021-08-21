@@ -105,7 +105,7 @@ public class GiangVienEntity {
         try {
             String sql ="insert into giang_vien (ma_gv,ten_gv,ngay_sinh,gioi_tinh,ma_khoa,hoc_vi) values (?,?,?,?,?,?)" ;
             pre= ConnectionDB.connect(sql);
-            pre.setInt(1,gv.getMa_khoa());
+            pre.setInt(1,gv.getMa_gv());
             pre.setString(2,gv.getTen_gv());
             pre.setString(3,gv.getNgay_sinh());
             pre.setString(4,gv.getGioi_tinh());
@@ -120,5 +120,39 @@ public class GiangVienEntity {
             throwables.printStackTrace();
         }
         return 0;
+    }
+    //Xóa 1 giảng viên trong database
+    public static void delete(int id){
+        PreparedStatement ps =null ;
+        try {
+            String sql = "Delete From giang_vien where ma_gv =?";
+            ps = ConnectionDB.connect(sql);
+            ps.setInt(1,id);
+
+            ps.executeUpdate();
+        }catch (SQLException | ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
+    public static int count() {
+        PreparedStatement st = null;
+        int count =0;
+        try {
+            String sql = "select count(ma_gv) from giang_vien  ";
+            st = ConnectionDB.connect(sql);
+            System.out.println(sql);
+            ResultSet rs = st.executeQuery();
+
+            while (rs.next()) {
+                count =rs.getInt(1);
+            }
+            rs.close();
+            st.close();
+            return count;
+        } catch (ClassNotFoundException | SQLException e) {
+            e.printStackTrace();
+            return 0;
+
+        }
     }
 }
