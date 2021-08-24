@@ -134,11 +134,11 @@ public class GiangVienEntity {
             e.printStackTrace();
         }
     }
-    public static int count() {
+    public static int maxMaGiaoVien() {
         PreparedStatement st = null;
         int count =0;
         try {
-            String sql = "select count(ma_gv) from giang_vien  ";
+            String sql = "select max(ma_gv) from giang_vien  ";
             st = ConnectionDB.connect(sql);
             System.out.println(sql);
             ResultSet rs = st.executeQuery();

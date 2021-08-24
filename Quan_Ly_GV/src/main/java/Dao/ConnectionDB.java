@@ -57,6 +57,6 @@ public static Statement connect() throws  ClassNotFoundException , SQLException 
         ConnectionDB.connect();
         GiangVien g = new GiangVien(111,"aa","aa","aaaaaaa",117,"vvvv");
         GiangVienEntity.addone(g);
-        System.out.print(GiangVienEntity.count());
+        System.out.print(GiangVienEntity.maxMaGiaoVien());
     }
 }

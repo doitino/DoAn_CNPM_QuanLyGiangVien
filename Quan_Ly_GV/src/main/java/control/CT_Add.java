@@ -29,7 +29,7 @@ public class CT_Add extends HttpServlet {
             String gioitinh =request.getParameter("gioitinh");
             String makhoa = request.getParameter("makhoa");
             String hocvi = request.getParameter("hocvi");
-            int count =GiangVienEntity.count() +1;
+            int count =GiangVienEntity.maxMaGiaoVien() +1;
             System.out.print(ten + ngaysinh+ hocvi);
 
 
